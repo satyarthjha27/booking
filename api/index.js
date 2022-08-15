@@ -35,8 +35,8 @@ app.use("/api/users", usersRoute);
 app.use("/api/hotels", hotelsRoute);
 app.use("/api/rooms", roomsRoute);
 
-
-app.listen(8800, () => {
+const port = process.env.PORT || 8800;
+app.listen(port, () => {
   connect();
   console.log("Connected to backend.");
 });
